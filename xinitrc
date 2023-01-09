@@ -37,7 +37,9 @@ picom --config ~/.dotfiles/picom.conf &
 feh --bg-scale ~/Bilder/bg_hori.jpg
 dunst --config ~/.dotfiles/dunst.conf &
 #blueman-applet &
+#cbatticon &
 #nm-applet &
 #pasystray &
+fcitx -d &
 i3 -c ~/.dotfiles/i3wm.conf
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-brightness="$(xbacklight -get | cut -f1 -d'.')"
+brightness="$(brightnessctl -m | grep -o [0-9]*% | sed s/%//g)"
 symbol=""
 color="#ffff00"
 colorb="#000000"
