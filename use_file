@@ -1,0 +1,58 @@
+x11-misc/picom opengl config.file dbus doc drm pcre test test
+>=x11-base/xorg-server-21.1.6 xvfb -elogind suid
+=app-accessibility/onboard-1.4.1.7::earshark dbus elogind
+=app-i18n/mozc-2.26.4220_p20201212102434_p20201219202429::gentoo emacs fcitx4 ibus
+>=sys-libs/zlib-1.2.13-r1 minizip
+=media-sound/spotify-1.1.84-r1::gentoo libnotify local-playback pax-kernel pulseaudio systray user-session dbus
+=net-wireless/bluez-5.66-r1  btpclient cups deprecated obex mesh udev user-session
+=media-sound/playerctl-2.3.1::gentoo dbus
+=sys-apps/dbus-1.15.2::gentoo elogind X user-session
+
+>=media-libs/harfbuzz-5.3.1-r1 icu
+>=dev-libs/xmlsec-1.2.36 nss
+
+>=dev-python/PyQt5-5.15.7::gentoo  dbus ssl -debug -declarative -designer -examples -gles2-only -gui -help -location -multimedia -network -opengl -positioning -printsupport -sensors -serialport -speech -sql -svg -testlib -webchannel -websockets -widgets -x11extras -xmlpatterns 
+>=dev-python/PyQt5-5.15.7 gui declarative widgets network
+>=dev-python/PyQt5-5.15.7 widgets gui declarative
+>=media-libs/libsdl2-2.24.2::gentoo fcitx4 gles2 haptic ibus joystick kms pipewire sndio sound video opengl dbus pulseaudio X xscreensaver
+>=x11-libs/libX11-1.8.1 abi_x86_32
+>=x11-libs/libXau-1.0.10 abi_x86_32
+>=x11-libs/libxcb-1.15-r1 abi_x86_32
+>=x11-libs/libXdmcp-1.1.3-r1 abi_x86_32
+>=dev-libs/libbsd-0.11.7 abi_x86_32
+>=app-crypt/libmd-1.0.4 abi_x86_32
+>=virtual/opengl-7.0-r2 abi_x86_32
+>=media-libs/mesa-22.2.5 abi_x86_32
+>=dev-libs/expat-2.5.0 abi_x86_32
+>=media-libs/libglvnd-1.5.0 abi_x86_32
+>=sys-libs/zlib-1.2.13-r1 abi_x86_32
+>=x11-libs/libdrm-2.4.114 abi_x86_32
+>=x11-libs/libxshmfence-1.3.1 abi_x86_32
+>=x11-libs/libXext-1.3.5 abi_x86_32
+>=x11-libs/libXxf86vm-1.1.5 abi_x86_32
+>=x11-libs/libXfixes-6.0.0 abi_x86_32
+>=app-arch/zstd-1.5.2-r3 abi_x86_32
+>=sys-devel/llvm-15.0.6-r1 abi_x86_32
+>=x11-libs/libXrandr-1.5.2 abi_x86_32
+>=x11-libs/libXrender-0.9.11 abi_x86_32
+>=dev-libs/libffi-3.4.4 abi_x86_32
+>=sys-libs/ncurses-6.3_p20221203-r2 abi_x86_32 tinfo
+>=x11-libs/libpciaccess-0.17 abi_x86_32
+
+
+>=x11-libs/gdk-pixbuf-2.42.10-r1 jpeg
+>=media-libs/gst-plugins-base-1.20.4 theora
+>=dev-libs/libdbusmenu-16.04.0-r2 gtk3
+
+>=media-gfx/feh-3.9.1 xinerama exif inotify
+>=dev-cpp/gtkmm-3.24.7:3.0 X
+>=x11-libs/cairo-1.17.6 -X
+=x11-libs/cairo-1.17.6 X aqua
+=dev-cpp/cairomm-1.14.4 X
+>=x11-drivers/xf86-video-intel-2.99.917_p20201215  dri sna udev xvmc uxa
+>=x11-misc/polybar-3.6.3-r2 curl doc ipc mpd network pulseaudio
+
+=x11-misc/lemonbar-9999 xft
+>=media-libs/clutter-1.26.4-r1::gentoo -X aqua
+>=media-libs/clutter-1.26.4-r1::gentoo introspection X -aqua -debug -doc -egl -gtk -test -wayland
+>=x11-libs/gtk+-3.24.35::gentoo introspection X
