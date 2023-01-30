@@ -32,14 +32,24 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-setxkbmap de -option ctrl:nocaps
-picom --config ~/.dotfiles/picom.conf &
-feh --bg-scale ~/Bilder/bg_hori.jpg
-dunst --config ~/.dotfiles/dunst.conf &
+setxkbmap de -option ctrl:nocaps &
+feh --bg-scale ~/Bilder/bg_hori.jpg &
+#dunst -conf ~/.dotfiles/dunst.conf &
 #blueman-applet &
 #cbatticon &
 #nm-applet &
 #pasystray &
-fcitx -d &
-i3 -c ~/.dotfiles/i3wm.conf
+export $(dbus-launch)
 
+exec "~/.dotfiles/Skripte/natural_scrolling.sh" &
+exec "~/.dotfiles/Skripte/tap_click.sh" &
+exec "~/.dotfiles/Skripte/init.sh" &
+
+picom --config ~/.dotfiles/picom.conf &
+fcitx -d &
+dunst -conf ~/.dotfiles/dunst.conf &
+
+#sxhkd -c ~/.dotfiles/sxhkd.conf &
+#bspwm -c ~/.dotfiles/bspwm.conf
+i3 -c ~/.dotfiles/i3wm.conf
+#exec dbus-launch-session  "i3 -c ~/.dotfiles/i3wm.conf"

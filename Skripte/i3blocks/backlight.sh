@@ -15,13 +15,23 @@ else
     symbol="|   |"
 fi
 
-#red=$(printf '%x' $(echo "$brightness*2.55" | bc))
-#green=$(printf '%x' $(echo "$brightness*2.55" | bc))
+red=$(printf '%x' $(echo "$brightness*2.55+50" | bc | awk '{print int($1+0.5)}'))
+green=$(printf '%x' $(echo "$brightness*2.55+50" | bc | awk '{print int($1+0.5)}'))
 
-#color="#${red}${green}00"
+if [ $((16#$red)) -ge $((10#255)) ]; then
+    red="ff"
+fi
 
-echo -e "<span color='$color' bgcolor='$colorb'> BKL $symbol $brightness% </span>"
-echo -e "<span color='$color' bgcolor='$colorb'> BKL $brightness% </span>"
+if [ $((16#$green)) -ge $((10#255)) ]; then
+    green="ff"
+fi
+
+
+color="#${red}${green}00"
+
+
+echo -e "<span color='$color' bgcolor='$colorb' background_alpha='1'> BKL $symbol $brightness% </span>"
+echo -e "<span color='$color' bgcolor='$colorb' background_alpha='1'> BKL $brightness% </span>"
 echo $color
 echo $color
 echo $color

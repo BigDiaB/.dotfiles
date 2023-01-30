@@ -31,7 +31,7 @@ if [[ "${PREV_TOTAL}" != "" ]] && [[ "${PREV_IDLE}" != "" ]]; then
   let "DIFF_TOTAL=$TOTAL-$PREV_TOTAL"
   let "DIFF_USAGE=(1000*($DIFF_TOTAL-$DIFF_IDLE)/$DIFF_TOTAL+5)/10"
 
-  colorb="#000000"
+  colorb="#ffffff00"
 
   if [ $((10#$DIFF_USAGE)) -ge $((10#70)) ]; then
       symbol="|■■■|";
@@ -47,9 +47,8 @@ if [[ "${PREV_TOTAL}" != "" ]] && [[ "${PREV_IDLE}" != "" ]]; then
       color="#00ff00"
   fi
 
-
-  echo -e "<span color='$color' bgcolor='$colorb'> CPU $symbol ${DIFF_USAGE}% </span>"
-  echo -e "<span color='$color' bgcolor='$colorb'> CPU ${DIFF_USAGE}% </span>"
+  echo -e "<span color='$color' bgcolor='$colorb' background_alpha='1'> CPU $symbol ${DIFF_USAGE}% </span>"
+  echo -e "<span color='$color' bgcolor='$colorb' background_alpha='1'> CPU ${DIFF_USAGE}% </span>"
   echo "$color"
   echo "$color"
   echo "$color"

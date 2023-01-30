@@ -1,7 +1,7 @@
 [global]
 font = "JetBrainsMonoExtrabold 12"
 markup = yes
-format = "%s\n%b"
+format = "%a: %s\n%b"
 #sort = yes
 indicate_hidden = yes
 alignment = left
@@ -11,21 +11,20 @@ ignore_newline = no
 stack_duplicates = true
 hide_duplicates_count = false
 show_indicators = yes
-shrink = true
-origin = top-right
+geometry = "400x5-30+50"
 idle_threshold = 120
 follow = mouse
 sticky_history = yes
 history_length = 20
 line_height = 0
-padding = 1
-horizontal_padding = 0
+padding = 20
+horizontal_padding = 10
 frame_width = 3
 frame_color = "#0101df"
-separator_height = 3
+separator_height = 5
 #separator_color = auto
-#separator_color = foreground
-separator_color = frame
+separator_color = foreground
+#separator_color = frame
 startup_notification = false
 
 # dmenu(-compatible) command that will be run when opening the context menu
@@ -34,27 +33,20 @@ dmenu = /usr/local/bin/dmenu -p dunst:
 # command that will be run when opening a URL
 #browser = /usr/local/bin/firefox -new-tab
 
-[shortcuts]
-# modifiers: ctrl / mod1 (Alt) / mod4 (Win)
-#close = ctrl+space
-#close_all = ctrl+shift+space
-#context = ctrl+shift+period
-#history = ctrl+shift+n
-
 [urgency_low]
 background = "#141c21"
 foreground = "#93a1a1"
-frame_color = "#141c21"
+frame_color = "#ffcc00"
 timeout = 5
 
 [urgency_normal]
 background = "#141c21"
 foreground = "#93a1a1"
-frame_color = "#000FFF"
+frame_color = "#04b404"
 timeout = 10
 
 [urgency_critical]
 background = "#141c21"
 foreground = "#93a1a1"
-frame_color = "#FF0000"
+frame_color = "#df013a"
 timeout = 0

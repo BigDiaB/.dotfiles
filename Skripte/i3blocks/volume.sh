@@ -8,10 +8,6 @@ color="#aaafff"
 colorb="#000000"
 status="VOL"
 
-if [[ $micmute == *"yes"* ]]; then
-    colorb="#400000"
-fi
-
 if [ $((volume)) -ge $((10#100)) ]; then
   pactl set-sink-volume @DEFAULT_SINK@ 100%
   volume="100"
@@ -32,8 +28,12 @@ if [[ $muted =~ "ja" ]]; then
     status="MUT"
 fi
 
-echo -e "<span color='$color' bgcolor='$colorb'> $status $symbol $volume% </span>"
-echo -e "<span color='$color' bgcolor='$colorb'> $status $volume% </span>"
+if [[ $micmute == *"yes"* ]]; then
+    status="MIC"
+fi
+
+echo -e "<span color='$color' bgcolor='$colorb' background_alpha='1'> $status $symbol $volume% </span>"
+echo -e "<span color='$color' bgcolor='$colorb' background_alpha='1'> $status $volume% </span>"
 echo "$color"
 echo "$color"
 echo "$color"

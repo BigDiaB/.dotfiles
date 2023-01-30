@@ -48,9 +48,8 @@ else
     symbol="|---|"
 fi
 
-echo -e "<span color='$color' bgcolor='$colorb'> $type $symbol $QUALITY </span>"
-echo -e "<span color='$color' bgcolor='$colorb'> $type $QUALITY </span>"
+echo -e "<span color='$color' bgcolor='$colorb' background_alpha='1'> $type $symbol $QUALITY </span>"
+echo -e "<span color='$color' bgcolor='$colorb' background_alpha='1'> $type $QUALITY </span>"
 echo "$color"
 echo "$color"
 echo "$color"
-fi

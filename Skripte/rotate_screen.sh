@@ -38,7 +38,7 @@ elif [ $value -eq 3 ] ; then
 	feh --bg-scale ~/Bilder/bg_vert.jpg
 fi
 
-xrandr --output DP1 --auto --right-of LVDS1
+~/.dotfiles/Skripte/init.sh
 xsetwacom set "Wacom ISDv4 E6 Pen stylus" MapToOutput LVDS1
 xsetwacom set "Wacom ISDv4 E6 Pen eraser" MapToOutput LVDS1
 xsetwacom set "Wacom ISDv4 E6 Finger touch" MapToOutput LVDS1
